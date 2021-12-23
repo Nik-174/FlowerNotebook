@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">MyText21</string>
+    <string name="app_name">Мои растения</string>
+    <string name="next">next image</string>
+    <string name="done">done</string>
+    <string name="description">Описание</string>
+    <string name="title">Название</string>
+    <string name="todo">TODO</string>
+    <string name="buttun1">Добавить растение</string>
 </resources>

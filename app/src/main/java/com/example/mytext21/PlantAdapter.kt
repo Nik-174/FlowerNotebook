@@ -5,17 +5,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mytext21.databinding.PlantItemBinding
-
-class PlantAdapter : RecyclerView.Adapter<PlantAdapter.PlantHolder>() {
+class PlantAdapter: RecyclerView.Adapter<PlantAdapter.PlantHolder>() {
     val plantList = ArrayList<Plant>()
-
-    class PlantHolder(item: View) : RecyclerView.ViewHolder(item) {
+    class PlantHolder(item: View): RecyclerView.ViewHolder(item) {
         val binding = PlantItemBinding.bind(item)
-
-        fun bind(plant: Plant) = with(binding) {
+        fun bind(plant: Plant) = with(binding){
             im.setImageResource(plant.imageId)
             tvTitle.text = plant.title
-
         }
     }
 
@@ -32,16 +28,8 @@ class PlantAdapter : RecyclerView.Adapter<PlantAdapter.PlantHolder>() {
         return plantList.size
     }
 
-    fun appPlant(plant: Plant) {
+    fun addPlant(plant: Plant){
         plantList.add(plant)
         notifyDataSetChanged()
     }
-
-    fun addAll(list:List<Plant>){
-        plantList.clear()
-        plantList.addAll(list)
-        notifyDataSetChanged()
-    }
-
-
 }
